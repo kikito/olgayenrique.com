@@ -18,16 +18,44 @@
 @import "vars";
 @import "inuit.css/inuit";
 
+html {
+  background-color: #faf2db;
+}
+
+a {
+  text-decoration: none;
+}
+
 .container {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 30px auto;
   padding-left: 20px;
   padding-right: 20px;
   @extend .cf;
-}
-
-@include media-query(desk){
-  .container {
+  @include media-query(desk){
     max-width: 1200px;
   }
+}
+
+.title {
+  @extend .text--center;
+}
+
+.narrator {
+  display: block;
+  background-color: #feea00;
+  padding: 20px;
+  color: #000;
+  width: 40%;
+  margin: 40px auto 100px auto;
+  border: 3px solid #000;
+  text-align: center;
+  font-size: 120%;
+
+  @include vendor(box-shadow, 10px 10px 1px rgba(0,0,0,0.4));
+  @include vendor(transform, rotate(358deg));
+  @include vendor(transition, all .2s ease-in-out);
+}
+
+.narrator:hover {
+  @include vendor(transform, rotate(355deg) scale(1.1));
 }

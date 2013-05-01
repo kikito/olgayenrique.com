@@ -1,10 +1,12 @@
 ---
-title: Welcome to Middleman
+title: Olga y Enrique se casan
 ---
 
-<div class="container">
-  <h1>Middleman is Watching</h1>
-  <p>
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p>
-</div>
+<p class="title">
+  <% link_to "/mas" do %>
+    <%= image_tag "capitantrueno.png" %>
+  <% end %>
+</p>
+<p>
+<%= link_to "Leer más", "/mas", :class => 'narrator' %>
+</p>
