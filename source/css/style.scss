@@ -14,14 +14,20 @@
 /**
  * Setup
  */
+@import url(http://fonts.googleapis.com/css?family=Cabin);
 @import "vars";
 @import "inuit.css/inuit";
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  @extend .cf;
+}
 
-
-
-
-/**
- * She’s all yours, cap’n... Begin importing your stuff here.
- */
-//@import "ui/example";
+@include media-query(desk){
+  .container {
+    max-width: 1200px;
+  }
+}
