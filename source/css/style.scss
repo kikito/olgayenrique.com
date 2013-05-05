@@ -14,7 +14,7 @@
 /**
  * Setup
  */
-@import url(http://fonts.googleapis.com/css?family=Cabin);
+//@import url(http://fonts.googleapis.com/css?family=Cabin);
 @import "vars";
 @import "inuit.css/inuit";
 
@@ -58,4 +58,9 @@ a {
 
 .narrator:hover {
   @include vendor(transform, rotate(355deg) scale(1.1));
+}
+
+.vignette {
+  display: block;
+  @extend .text--center;
 }
