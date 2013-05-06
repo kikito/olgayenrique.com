@@ -14,7 +14,7 @@
 /**
  * Setup
  */
-//@import url(http://fonts.googleapis.com/css?family=Cabin);
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,700);
 @import "vars";
 @import "inuit.css/inuit";
 
@@ -40,27 +40,59 @@ a {
   @extend .text--center;
 }
 
-.narrator {
+.splash {
   display: block;
   background-color: #feea00;
   padding: 20px;
   color: #000;
-  width: 40%;
+  width: 50%;
   margin: 40px auto 100px auto;
   border: 3px solid #000;
   text-align: center;
-  font-size: 120%;
+  text-shadow: none;
 
   @include vendor(box-shadow, 10px 10px 1px rgba(0,0,0,0.4));
   @include vendor(transform, rotate(358deg));
   @include vendor(transition, all .2s ease-in-out);
+  &:hover {
+    @include vendor(transform, rotate(355deg) scale(1.1));
+  }
 }
 
-.narrator:hover {
-  @include vendor(transform, rotate(355deg) scale(1.1));
-}
+
 
 .vignette {
   display: block;
   @extend .text--center;
+}
+
+.content {
+  border: 3px solid #000;
+  text-shadow: 1px 1px #fff;
+  background-color: #eee;
+  color: #333;
+
+  @include vendor(border-radius, 4px);
+  @include vendor(box-shadow, 10px 10px 1px rgba(0,0,0,0.4));
+  @extend .push;
+  @extend .soft;
+
+  h1 {
+    background-color: #feea00;
+    padding: 20px;
+    color: #000;
+    width: 40%;
+    margin: 30px auto;
+    border: 3px solid #000;
+    text-align: center;
+    text-shadow: none;
+    font-size: 150%;
+
+    @include vendor(box-shadow, 3px 3px 1px rgba(0,0,0,0.4));
+    @include vendor(transform, rotate(1deg));
+  }
+
+  h2 {
+    font-size: 120%;
+  }
 }
