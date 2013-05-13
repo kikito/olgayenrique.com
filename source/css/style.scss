@@ -24,6 +24,11 @@ html {
 
 a {
   text-decoration: none;
+  color: #08c;
+  &:hover {
+    color: #005580;
+    text-decoration: underline;
+  }
 }
 
 .container {
