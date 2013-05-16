@@ -61,10 +61,10 @@ a {
   @include vendor(transition, all .2s ease-in-out);
   &:hover {
     @include vendor(transform, rotate(355deg) scale(1.1));
+    text-decoration: none;
+    color: #000;
   }
 }
-
-
 
 .vignette {
   display: block;
@@ -95,6 +95,10 @@ a {
 
     @include vendor(box-shadow, 3px 3px 1px rgba(0,0,0,0.4));
     @include vendor(transform, rotate(1deg));
+  }
+
+  h1.alt {
+    @include vendor(transform, rotate(-0.7deg));
   }
 
   h2 {
