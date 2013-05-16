@@ -36,8 +36,12 @@ end
 ###
 # Helpers
 ###
+#
+set :css_dir,    'css'
+set :js_dir,     'js'
+set :images_dir, 'img'
 
-
+# Render foo.md as foo/index.html (so that it can be accessed as /foo and not as foo.html)
 activate :directory_indexes
 
 # Automatic image dimensions on image_tag helper
@@ -50,11 +54,19 @@ activate :directory_indexes
 #   end
 # end
 
-set :css_dir, 'css'
+# load environment variables from .env if it exists
+activate :dotenv
 
-set :js_dir, 'js'
-
-set :images_dir, 'img'
+# sync with aws (needs a .env file with the right variables)
+activate :sync do |sync|
+  sync.fog_provider           = 'AWS' # Your storage provider
+  sync.fog_directory          = ENV['AWS_BUCKET'] # Your bucket name
+  sync.fog_region             = ENV['AWS_REGION']
+  sync.aws_access_key_id      = ENV['AWS_KEY']
+  sync.aws_secret_access_key  = ENV['AWS_SECRET']
+  sync.existing_remote_files  = 'keep' # What to do with your existing remote files? (keep or delete)
+  sync.after_build = false # Disable sync to run after Middleman build ( defaults to true )
+end
 
 # Build-specific configuration
 configure :build do
