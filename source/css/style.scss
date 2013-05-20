@@ -14,6 +14,7 @@
 /**
  * Setup
  */
+
 @import url(http://fonts.googleapis.com/css?family=Cabin:400,700);
 @import "vars";
 @import "inuit.css/inuit";
@@ -71,6 +72,10 @@ a {
   @extend .text--center;
 }
 
+img.vignette, .vignette img {
+  border: 3px solid #000;
+}
+
 .content {
   border: 3px solid #000;
   text-shadow: 1px 1px #fff;
@@ -105,3 +110,5 @@ a {
     font-size: 120%;
   }
 }
+
+
