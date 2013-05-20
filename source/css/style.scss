@@ -69,11 +69,13 @@ a {
 
 .vignette {
   display: block;
+  margin-top: 24px;
+  margin-bottom: 24px;
   @extend .text--center;
-}
 
-img.vignette, .vignette img {
-  border: 3px solid #000;
+  img {
+    border: 3px solid #000;
+  }
 }
 
 .content {
@@ -92,6 +94,7 @@ img.vignette, .vignette img {
     padding: 20px;
     color: #000;
     width: 40%;
+    min-width: 7em;
     margin: 30px auto;
     border: 3px solid #000;
     text-align: center;
