@@ -5,3 +5,4 @@ source 'http://rubygems.org'
 gem "middleman", "~>3.0.13"
 gem "middleman-sync"
 gem "middleman-dotenv"
+gem "kramdown"

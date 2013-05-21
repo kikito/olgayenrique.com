@@ -1,3 +1,5 @@
+require "kramdown"
+set :markdown_engine, ::Tilt::KramdownTemplate
 ###
 # Compass
 ###
