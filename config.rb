@@ -44,7 +44,7 @@ set :js_dir,     'js'
 set :images_dir, 'img'
 
 # Render foo.md as foo/index.html (so that it can be accessed as /foo and not as foo.html)
-activate :directory_indexes
+# activate :directory_indexes
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
@@ -73,10 +73,10 @@ end
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 
   # Enable cache buster
   # activate :cache_buster
