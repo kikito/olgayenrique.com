@@ -81,6 +81,13 @@ hr {
   }
 }
 
+hr.alt {
+  &:after {
+    content: "↡";
+    font-size: 300%;
+  }
+}
+
 .content {
   border: 3px solid #000;
   text-shadow: 1px 1px #fff;
